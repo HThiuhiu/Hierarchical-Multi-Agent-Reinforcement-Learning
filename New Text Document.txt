@@ -1,0 +1,14 @@
+Các công đoạn cần làm:
+Phase1: Train Skill --> tạo ra các hành động cho agent thực hiện ( 50 skills)
+
+Phase2: Train Các chọn Skill để thực hiện --> sử dụng Supervised Learning để train việc lựa chọn này
+
+Phase3: Train Goal_attention --> Mạng toàn cục cho ra Goal của từng agent và tạo thêm 1 mạng học các quan hệ từ Goal của agent_i với các agent khác. 
+vd: Mục tiêu của agent_1 là theo dõi mục tiêu 2,3 --> các agent khác sẽ biết thông tin và hỗ trợ agent_1 trong công việc theo dõi mục tiêu 2,3.
+
+
+FrameWork:
+1. Từ trạng thái cục bộ --> đưa vào 1 mạng và cho ra Goal cho từng Agent --> cho Goal và các agent vào 1 mạng gọi là Goal_attention --> để chúng hỗ trợ nhau
+2. Kết hợp thông tin từ Goal_attention --> cho vào mạng ở Phase2 --> skill Z phù hợp.
+3. Agent nhận được skill Z sẽ thực hiện hành động skill Z trong T steps tiếp theo 
+4. Sau khi agent thực hiện skill của mình trong T steps sẽ gửi thông tin bản thân hiện có về lại với cục bộ --> quay lại bước 1 .
