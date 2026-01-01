@@ -5,5 +5,6 @@ Reinforcement Learning
 
 * Hưỡng dẫn chạy:
   1. Code môi trường lấy thông tin từ agent và target trong môi trương thay cho phần env.reset()
+ ![Demo giao diện](Git1.png)
 
 Note: chưa có hành động nên em mặc định nó giao theo dõi cái nào thì sẽ chiếu thẳng về phía thằng ưu tiên. < cần: Fix đoạn hành động>
